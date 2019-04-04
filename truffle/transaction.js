@@ -3,7 +3,7 @@ var Greeter = artifacts.require("greeter");
 module.exports = function(done) {
 	console.log("Getting deployed version of Greeter...")
 	Greeter.deployed().then(function(instance) {
-		console.log("Setting value to 65...");
+		console.log("Setting value..");
 		return instance.set("Hello Quorum Dev", {privateFor: ["ROAZBWtSacxXQrOe3FGAqJDyJjFePR5ce4TSIzmJ0Bc="]});
 	}).then(function(result) {
 		console.log("Transaction:", result.tx);
